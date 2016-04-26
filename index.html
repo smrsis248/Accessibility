@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Code Sample IS2</title>
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+    
+    
+    <link rel='stylesheet prefetch' href='https://cdn.jsdelivr.net/foundation/6.2.0/foundation.min.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <body>
+	<h1>Tips for Accessible Design</h1>
+<!-- 	<a class="skip" href="#navbar">Skip To Navigation</a>
+	<a class="skip" href="#mainContent">Skip To Main Content</a> -->
+	
+	
+<!-- 	<nav role="navigation" aria-label="main navigation"> -->
+		<nav>		
+		
+		<!--assitive technologies recognizes role...nav as a landmark role, aria label is relayed to the screen reader helpful if you have multiple areas within a single page-->
+		<ul id="navbar">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+		</ul>
+	</nav>
+	<div class="row" id="mainContent">
+		<div class="small-12 large-6 columns">
+			<h2>Features For Buttons</h2>
+			<a href="#" class="button" id="button1">Click to Reveal</a>
+			<div class="hidden">
+				<p>This content is revealed with the button click. It is helpful to put very descriptive text for buttons. "Click to Reveal" is more descriptive than just "Click Me" or "Button", etc. Also, it is helpful to have this content under the button because screen readers don't automatically go back to the html preceding something they have already read. If this hidden content precedes the button, screen readers wouldn't go back to read it and users would think the button did nothing.</p>
+				<p>It is acceptable to create buttons using the anchor tag. The code for the "Click to Hide" button is:</p>
+				<div class="codeSample">
+					&lt; href="#" class="button" id="button2"&gt;Click to Hide&lt;/a&gt;
+				</div>
+				<a href="#" class="button" id="button2">Click to Hide</a>
+			</div>
+		</div>
+		<div class="small-12 large-6 columns">
+			<h2>Images</h2>
+			<img id="imageLake" src="https://theluxurytravelexpert.files.wordpress.com/2014/01/scenery.jpg" alt="Image">
+			<p>It is important to use the "alt" tag when including images on your webpages. "Alt" stands for Alternative Text. The alt text for this image could read something like this: "Snow-dusted landscape with a pristine lake in front of a mountain range".</p>
+			<p>More helful hints on how to write alt text can be found in the <a href="http://bit.ly/1YzvECS" target="_blank">article</a>: 
+<!-- 				<a href="http://bit.ly/1YzvECS" target="_blank"> -->
+					The Definitive Guide To The Alt-Text Field.
+<!-- 				</a> -->
+			</p>
+		</div>
+		<hr />
+		<div class="small-12 large-6 columns">
+			<h2>CheckBoxes</h2>
+			<p>For this example, there are two important components to the input tag (what is used to make the checkbox): "type" and "required". "Type" tells the screen reader what kind of element it is looking at. "Required" is either true or false and tells the
+				user that, in this case of the checkbox, either it is required to be clicked or not. Also, when coding the input and label tags, make sure the "id" for the input tag matches the "for" of the label tag.</p>
+			<!--input type "checkbox" communicates its role as a checkbox and comes with required and checked-->
+			<input id="option1" type="checkbox" required="true" />
+			<!--required means it must be checked-->
+			<label for="option1">Option 1 (Required)</label>
+			<br />
+			<input id="option2" type="checkbox" required="false" />
+			<label for="option2">Option 2</label>
+			<p>The screen reader would read the above as something like:</p>
+			<p class="linkingTextEx">
+				Option 1 Required checkbox not checked
+				<br /> Option 2 checkbox not checked
+			</p>
+		</div>
+		
+		<div class="small-12 large-6 columns">
+			<h2>Links</h2>
+			<p>The text of a link should say exactly what the link is going to. For example, this is a terrible way to link to the WCAG page:</p>
+			<!--bad way to link-->
+			<p class="linkingTextEx">Click <a href="https://www.w3.org/WAI/intro/wcag" target="_blank">here</a> to go to the WCAG webpage.</p>
+			<p>A better way to go about it would be to write something more like:</p>
+			<p class="linkingTextEx">More information about WCAG could be found on the <a href="https://www.w3.org/WAI/intro/wcag" target="_blank">WCAG webpage</a>.</p>
+			<p>Also, it isn't a bad practice to use the "target" attribute in the anchor tag, which will open the link in a new tab:</p>
+			<div class="codeSample">
+				&lt;a href="#" target="_blank"&gt;Link Text&lt;/a&gt;
+			</div>
+		</div>
+		<hr />
+		<div class="large-12 columns">
+			<h2>Input Box</h2>
+			<p>Below are two ways to code input boxes for forms. One way is called 'explicit' and the other is 'implicit'. For 'explicit', there is a text label with a "for" attribute (like used in the checkbox example). For 'implicit', there is no "for" attribute
+				and both the label text and the form input are within the label element. Both options are acceptable for accessibility purposes.</p>
+			<!--explicit-->
+			<label>Name</label>
+			<input type="text">
+			<p>The above is an example of the way to code an 'explicit' label. The code looks like:</p>
+			<div class="codeSample">
+				&lt;label for="name"&gt;Name&lt;/label&gt;
+				<br /> &lt;input type="text" id="name"&gt;
+			</div>
+			<!--implicit-->
+			<label>Name <input type="text" role="combobox"></label>
+			<p>The above is an example of the way to code an 'implicit' label. The code looks like:</p>
+			<div class="codeSample">
+				&lt;label&gt;Name &lt;input type="text" role="combobox"&gt;&lt;/label&gt;
+			</div>
+		</div>
+	</div>
+</body>
+<footer>
+<!-- 	<div class="row">
+		<a href="#">Home</a>
+		<a href="#">About</a>
+	</div> -->
+	<div class="row">
+		<p>Tips for Accessible Design - Copyright 2016</p>
+	</div>
+</footer>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>

@@ -1,0 +1,117 @@
+h1, h2
+{
+	text-align: center;
+}
+
+p
+{
+	margin-top: 1.5em;
+}
+
+/* All the skip classes are for the hidden elements that allow keyboard users to skip to certain elements. */
+
+/* a.skip {
+	left: -999px;
+	position: absolute;
+	overflow: hidden;
+}
+
+a.skip:focus,
+a.skip:active {
+	left: auto;
+	
+	color: #fff;
+	background-color: #000;
+	width: 30%;
+	height: auto;
+	margin: 10px 35%;	
+	padding: 5px;
+	text-align: center;
+	font-size: 1.2em;
+} */
+
+/* Navigation */
+@media only screen and (min-width: 64.063em) 
+{
+	ul
+	{
+		padding: 0 7em;
+	}
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+li {
+	float: left;
+	border-right: 1px solid #bbb;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+li a:hover {
+	background-color: #2199E8;
+	color: black;
+}
+
+/* This hides content */
+.hidden
+{
+	display: none;
+}
+
+/* CSS to make the samples of code */
+.codeSample
+{
+	padding: 1em 2em;
+	background-color: #E0E0E0;
+	margin-bottom: 1em;
+	font-family: 'Inconsolata';
+}
+
+.linkingTextEx
+{
+	padding: 1em 2em;
+	background-color: #E0E0E0;
+	margin-bottom: 1em;
+}
+
+/* This is for the most part centering the buttons */
+.button
+{
+	 margin: 0 40%;
+    width: 9em;
+}
+
+/* Footer Styling */
+footer
+{
+	background-color: #333;
+	padding: 1em 0em;
+}
+
+footer a
+{
+	display: block;
+	color: white;
+	text-align: left;
+	padding: 0.2em 1em;
+	text-decoration: none;
+}
+
+footer p
+{
+	color: white;
+	text-align: center;
+	margin: 0em;
+}
